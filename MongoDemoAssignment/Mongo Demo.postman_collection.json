@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Mongo Demo",
+		"_postman_id": "3009caab-6597-ac8f-a796-0fb53d0cedc2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/v1/{DBserverName}/db/{Database}/fetch/tables",
+			"request": {
+				"url": "localhost:8080/v1/{DBserverName}/db/{Database}/fetch/tables",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "To get All Tables of a given Postgress server and Database\ngruped on Schemas and Can be Fitered on TABLE_TYPE"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/{DBserverName}/db/{Database}/fetch/tables",
+			"request": {
+				"url": "localhost:8080/v1/{DBServerName}/fetch/databases",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "To get All Databases of A Given Postgres Server"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/add/datapoint",
+			"request": {
+				"url": "http://localhost:8080/add/datapoint",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"host\":\"127.0.0.1\",\n\t\"port\":5432,\n    \"username\":\"postgres\",\n    \"password\":\"p@ssw0rd\",\n    \"name\":\"Local_1\"\n}"
+				},
+				"description": "To Add A new Postgres Server Credential to the Data Store"
+			},
+			"response": []
+		}
+	]
+}
